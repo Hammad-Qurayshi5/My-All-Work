@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alkaram</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    #c1{
+      transition: transform .2s;  
+    }
+    #c1:hover{
+      transform: scale(1.1);
+    }
+    </style>
+<body>
+    <!-- Nav Bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid navcontainer">
+            <a href="index.html" class="navbar-brand"><img src="Images/Frame 1.png" height="55px"></a>
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul style="margin-top: 4px;" class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                  <a class="nav-link ho" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link ho" href="compare.html"> Products Compare</a>
+                  </li>
+                  <li class="dropdown"><a href="" class="ho nav-link dropdown-toggle " data-bs-toggle="dropdown"
+                      data-bs-target="#dpdn">Brands</a>
+                    <ul class="dropdown-menu bg-light" id="dpdn">
+                      <li><a href="J.J.html" class="ho nav-link">J.</a></li>
+                      <li><a href="Khaadi.html" class="ho nav-link">Khaddi</a></li>
+                      <li><a href="almirah.html" class="ho nav-link">Almirah</a></li>
+                      <li><a href="Gul.html" class="ho nav-link">Gul Ahmed</a></li>
+                      <li><a href="sanasafinaz.html" class="ho nav-link">Sana Safinaz</a></li>
+                      <li><a href="asimjofa.html" class="ho nav-link">Asim Jofa</a></li>
+                      <li><a href="alkaram.html" class="ho nav-link">Alkaram</a></li>
+                    </ul>
+                  </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link ho" href="contactus.html">Contact us</a>
+                  </li>
+                        
+                </ul>
+                
+                <!-- <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search Here" aria-label="Search">
+                  <button class="btn btn-outline-danger text-dark" type="submit">Search</button>
+                </form> -->
+              </div>
+            </div>
+          </nav>
+        </nav>
+    
+        </header>
+        <!-- End of Navbar -->
+      <!-- Modal Start -->
+        <div class="modal fade" id="mdl">
+          <div class="modal-dialog modal-xl">
+              <div class="modal-content" style="margin-top: -40px;">
+                  <div class="text-center modal-header">
+                      <button class="btn-close" data-bs-dismiss="modal"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="picturemd"><img class="modal-title" height="600px" width="444.2px" src="" id="img" alt=""></div>
+                      <div id="contentmd">
+                      <h1 id="name"></h1>
+                      <p id="brand"></p>
+                      <h4 id="price"></h4><br>
+                      <p><strong> Size: </strong></p>
+                      <p><button class="btn btn-outline-dark">XS</button><button class="btn btn-outline-dark" style="margin-left: 10px;">S</button><button class="btn btn-outline-dark" style="margin-left: 10px;">M</button><button class="btn btn-outline-dark" style="margin-left: 10px;">L</button></p><br>
+                      <p><strong>Quantity :</strong> <input type="number" style="margin-left: 5px;" class="text-center" placeholder="0"></p><br>
+                      <p id="desc"></p>
+                      <img src="Images/endline2.png" width="620px" height="90px" alt="">
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-dark" data-bs-dismiss="modal" >Close</button>
+                    <button class="btn btn-dark" data-bs-dismiss="modal" >Add to Cart</button>
+                  
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- ----------------------------------My Modal End-------------------------------- -->
+     <!-- Carousel Start -->
+     <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      </div>
+      <div class="carousel-inner">
+      <div class="carousel-item active">
+      <img src="Images/Alkaramstudio_product.png" class="d-block imgheightx w-100" height="550">
+      </div>
+  </div>
+    <div style="margin-top: 40px;" class="container">
+            <div style="margin-bottom: 36px;" id="cards" class="row">
+          
+        </div>
+    </div>
+    <script src="JS/datau.js"></script>
+    <script>
+        for(var i=0;i<aksproducts.length;i++)
+        {
+            document.getElementById("cards").innerHTML += `
+            <div class="col-sm-6 col-md-4 col-lg-3 h-75">
+                   <div style="margin-bottom: 80px; height:533px" data-bs-target="" data-bs-toggle="modal" id="inner" class="card cheight">
+                       <img src=`+aksproducts[i].Image+` class="card-img-top " style="height:300px" >
+                       <div  class="card-body">
+                           
+                           <h3 class="text-center card-title ">`+ aksproducts[i].Name +`</h3>
+                           <p class="text-center">`+aksproducts[i].Price+`</p>
+                        
+                          <div class="row">
+                            <div class="col-6">
+                        <button class="btn btn-outline-danger text-dark mb-2" onclick="mymodal('${aksproducts[i].Image}','${aksproducts[i].Name}','${aksproducts[i].Brand}','${aksproducts[i].Price}','${aksproducts[i].Description}')" data-bs-toggle="modal" data-bs-target="#mdl">Details</button>
+                            </div>
+                            <div class="col-6">
+            <button  class="btn btn-outline-danger text-dark mb-2"><a style="text-decoration:none; color: black; margin-top: -1000px;" href=${aksproducts[i].File}>Download</a></button>
+                            </div>
+                          </div>
+                       </div>
+                   </div>
+            
+        `
+        }
+        function mymodal(image,name,brand,price,desc)
+        {
+           document.getElementById("img").src = image;
+           document.getElementById("name").innerHTML = name;
+           document.getElementById("brand").innerHTML = brand;
+           document.getElementById("price").innerHTML = price;
+           document.getElementById("desc").innerHTML = desc;
+          console.log("test")
+        }
+    </script>
+
+    <!-- Site footer -->
+ <div class="container-fluid bg-dark text-white"> 
+  <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify">Aptech.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+          </div>
+  
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li><a href="">C</a></li>
+              <li><a href="">UI Design</a></li>
+              <li><a href="">PHP</a></li>
+              <li><a href="">Java</a></li>
+              <li><a href="">Android</a></li>
+              <li><a href="">Templates</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li><a href="">About Us</a></li>
+              <li><a href="">Contact Us</a></li>
+              <li><a href="">Contribute</a></li>
+              <li><a href="">Privacy Policy</a></li>
+              <li><a href="">Sitemap</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+         <a href="#">Aptech</a>.
+            </p>
+          </div>
+  
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa-brands fa-linkedin"></i></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+  </div> 
+  </footer>
+  
+</body>
+</html>

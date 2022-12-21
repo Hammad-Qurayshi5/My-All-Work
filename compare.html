@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Products Compare </title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="JS/bootstrap.bundle.min.js"></script>
+   
+</head>
+<body>
+     <!-- Nav Bar -->
+     <header>
+        <nav class="navbar navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid navcontainer">
+            <a href="index.html" class="navbar-brand"><img src="Images/Frame 1.png" height="55"></a>
+              <a class="navbar-brand" href="#"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link ho" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link ho" href="compare.html">Products Compare</a>
+                    </li>
+                    <li class="dropdown"><a href="" class="ho nav-link dropdown-toggle " data-bs-toggle="dropdown"
+                        data-bs-target="#dpdn">Brands</a>
+                      <ul class="dropdown-menu bg-light" id="dpdn">
+                        <li><a href="J.J.html" class="ho nav-link">J.</a></li>
+                        <li><a href="Khaadi.html" class="ho nav-link">Khaddi</a></li>
+                        <li><a href="almirah.html" class="ho nav-link">Almirah</a></li>
+                        <li><a href="Gul.html" class="ho nav-link">Gul Ahmed</a></li>
+                        <li><a href="sanasafinaz.html" class="ho nav-link">Sana Safinaz</a></li>
+                        <li><a href="asimjofa.html" class="ho nav-link">Asim Jofa</a></li>
+                      </ul>
+                    </li>
+                  
+                  <li class="nav-item">
+                    <a class="nav-link ho" href="contactus.html">Contact us</a>
+                  </li>
+                        
+                </ul>
+                
+                <!-- <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search Here" aria-label="Search">
+                  <button class="btn btn-outline-danger text-dark" type="submit">Search</button>
+                </form> -->
+              </div>
+            </div>
+          </nav>
+        </nav>
+    
+        </header>
+     <!-----------------------------------  -->
+       <!-- Carousel Start -->
+       <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        </div>
+        <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="Images/Pret-banners.webp" class="d-block imgheightz w-100" height="600">
+        </div>
+    </div>
+     <div class="container">
+        <div class="row">
+            <h1 style="margin-top: 40px;" class=" h1 ch text-center">Products Compare</h1>
+            
+            <div style="margin-top: 27px;" class="col-12">
+                <table class="table table-bordered table-responsive table-hover">
+                    <tr>
+                        <th>Select Product</th>
+                        <th>
+                            <select  id="select1" class="form-control" onchange="products1(this.value)">
+                                <option value="0">----Select Any product--------</option>
+                            </select>
+                        </th>
+                        <th>
+                            <select  id="select2" class="form-control" onchange="products2(this.value)">
+                                <option value="0">----Select Any product--------</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>Product Image</th>
+                        <td><img src="https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg" id="img1" width="200" height="200"></td>
+                        <td><img src="https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg" id="img2" width="200" height="200"></td>
+                    </tr>
+                    <tr>
+                        <th>Product Name</th>
+                        <td id="name1">N/A</td>
+                        <td id="name2">N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Product Brand</th>
+                        <td id="br1">N/A</td>
+                        <td id="br2">N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Product Price</th>
+                        <td id="pr1">N/A</td>
+                        <td id="pr2">N/A</td>
+                    </tr>
+                    <tr>
+                        <th>Product Description</th>
+                        <td id="desc1">N/A</td>
+                        <td id="desc2">N/A</td>
+                    </tr>
+                  
+
+
+                </table>
+            </div>
+        </div>
+     </div>
+
+     <hr style="margin-top: 40px;">
+     <!-- Site footer -->
+<div class="container-fluid p-0 m-0 bg-dark text-white "> 
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+              <h6>About</h6>
+              <p class="text-justify">WWW.Gracious Garments.com Clothing brands for both men and women depend upon unbeatable designs, climate conditions and trendy Articles. The core thinking behind the brand’s ideas is to boost up the personality by wearing the clothes and they work accordingly. As women more involved in shopping that is why there are a huge number of local and international Pakistani women’s clothing brands.</p>
+            </div>
+    
+            <div class="col-xs-6 col-md-3">
+              <h6>Brands</h6>
+              <ul class="footer-links">
+                <li><a href="J.J.html">J.</a></li>
+                <li><a href="Khaadi.html">Khaadi</a></li>
+                <li><a href="Gul.html">GulAhmed</a></li>
+                <li><a href="almirah.html">Almirah</a></li>
+                <li><a href="">AsimJofa</a></li>
+                <li><a href="">kayseria</a></li>
+                <li><a href="">SanaSafinaz</a></li>
+              </ul>
+            </div>
+    
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="">About Us</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="">Contribute</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Sitemap</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by 
+           <a href="#">Hammad , Umer & Dawood</a>.
+              </p>
+            </div>
+    
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa-brands fa-linkedin"></i></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div> 
+    </footer>
+
+     <!-- ----------------------------------------- -->
+     <script src="JS/comparedata.js"></script>
+     <script>
+        for(var i=1;i<products.length;i++)
+        {
+            document.getElementById("select1").innerHTML += `
+            <option value="${i}">${products[i].Name}</option>           
+            `
+            document.getElementById("select2").innerHTML += `
+            <option value="${i}">${products[i].Name}</option>               
+            `
+        }
+        function products1(a)
+        {
+            var s2 = document.getElementById("select2").value;
+            if(a != s2)
+            {
+            document.getElementById("img1").src = products[a].Image;
+            document.getElementById("name1").innerHTML = products[a].Name;
+            document.getElementById("br1").innerHTML = products[a].Brand;
+            document.getElementById("pr1").innerHTML = products[a].Price;
+            document.getElementById("desc1").innerHTML = products[a].Description;
+            }
+            else
+            {
+            document.getElementById("select1").selectedIndex = 0 ;
+            document.getElementById("img1").src = products[0].Image;
+            document.getElementById("name1").innerHTML = "";
+            document.getElementById("br1").innerHTML = "";
+            document.getElementById("pr1").innerHTML = "";
+            document.getElementById("desc1").innerHTML = "";   
+            }
+          
+        }
+        function products2(a)
+        {
+            var s1 = document.getElementById("select1").value;
+            if(a != s1)
+            {
+                document.getElementById("img2").src = products[a].Image;
+                document.getElementById("name2").innerHTML = products[a].Name;
+                document.getElementById("br2").innerHTML = products[a].Brand;
+                document.getElementById("pr2").innerHTML = products[a].Price;
+                document.getElementById("desc2").innerHTML = products[a].Description;
+            }
+            else
+            {
+                document.getElementById("select2").selectedIndex = 0 ;
+                document.getElementById("img2").src = products[0].Image;
+                document.getElementById("name2").innerHTML = "";
+                document.getElementById("br2").innerHTML = "";
+                document.getElementById("pr2").innerHTML = "";
+                document.getElementById("desc2").innerHTML = "";   
+            }
+
+        }
+
+
+     </script>
+</body>
+</html>
